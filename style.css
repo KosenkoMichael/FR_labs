@@ -12,8 +12,36 @@ body {
 
 .biography {
     font-size: larger;
-    color: purple;
     padding-bottom: 10px;
+    background: linear-gradient(90deg,
+            red, blue, purple,
+            blue,
+            red, blue, purple);
+    background-clip: text;
+    color: transparent;
+}
+
+.header {
+    display: flex;
+    margin: 25px;
+}
+
+.left_header {
+    flex: 1;
+    border: 5px solid brown;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.right_header {
+    flex: 1;
+    border: 5px solid brown;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
 }
 
 .content {
@@ -27,6 +55,7 @@ body {
     border-radius: 50px;
     margin: 10px;
     padding: 10px;
+    text-align: center;
 }
 
 .content-right {
@@ -56,4 +85,108 @@ body {
     border: 2px solid brown;
     border-radius: 50px;
     margin: 10px;
+}
+
+.container {
+    background-color: brown;
+}
+
+.block {
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.cont_img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.container-2 {
+    background-color: brown;
+    height: 300px;
+    position: relative;
+}
+
+.block-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+}
+
+.container-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: brown;
+    padding: 10px;
+}
+
+.block-3 {
+    background-color: blueviolet;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.position {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container4 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+}
+
+.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    border: 2px solid red;
+    top: 25px;
+    left: 25px;
+}
+
+.blue {
+    border: 2px solid blue;
+    top: 95px;
+    left: 95px;
+}
+
+.green {
+    border: 2px solid green;
+    top: 165px;
+    left: 165px;
+}
+
+.fixed-owl {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+
+.wet_owl {
+    max-height: 300px;
+    object-fit: contain; /* Масштабируем изображение, сохраняя его пропорции */
+    border-radius: 50px;
 }
