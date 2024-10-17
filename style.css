@@ -24,18 +24,11 @@ body {
 .header {
     display: flex;
     margin: 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.left_header {
-    flex: 1;
-    border: 5px solid brown;
-    border-radius: 50px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-}
-
-.right_header {
+.header_part {
     flex: 1;
     border: 5px solid brown;
     border-radius: 50px;
@@ -183,10 +176,11 @@ body {
     bottom: 0px;
     right: 0px;
     z-index: 1000;
+    margin: 25px;
 }
 
 .wet_owl {
     max-height: 300px;
-    object-fit: contain; /* Масштабируем изображение, сохраняя его пропорции */
+    object-fit: contain;
     border-radius: 50px;
 }
