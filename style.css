@@ -1,0 +1,59 @@
+body {
+    background-image: url('back.jpg');
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.owl {
+    width: 70%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.biography {
+    font-size: larger;
+    color: purple;
+    padding-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    margin: 25px;
+}
+
+.content-left {
+    flex: 2;
+    border: 5px solid brown;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.content-right {
+    flex: 1;
+    border: 5px solid brown;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.lists {
+    display: flex;
+}
+
+.left_list {
+    flex: 1;
+    text-align: center;
+    border: 2px solid brown;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.right_list {
+    flex: 1;
+    text-align: center;
+    border: 2px solid brown;
+    border-radius: 50px;
+    margin: 10px;
+}
