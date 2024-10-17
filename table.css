@@ -43,3 +43,13 @@ th, td {
     text-align: left;
     padding: 8px;
 }
+
+.form-container{
+    display: flex;
+}
+
+button{
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    cursor: pointer;
+}

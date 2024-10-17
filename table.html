@@ -12,68 +12,94 @@
         <div class = "header_part"><a href="page_2.html">Позиционирование элементов</a></div>
         <div class = "header_part"><a href="table.html">Таблица</a></div>
     </div>
-    <table>
-        <caption><strong>Список студентов</strong></caption>
-        <table>
+        <h1><strong>Список студентов</strong></h1>
+        <form id="studentForm">
+            <div class = "form-container">
+                <div>
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" required><br><br>
+            
+                <label for="name">ФИО студента:</label>
+                <input type="text" id="name" name="name" required><br><br>
+            
+                <label for="recordBook">Номер зачетной книжки:</label>
+                <input type="text" id="recordBook" name="recordBook" required><br><br>
+            
+                <label for="groupNumber">Номер группы:</label>
+                <input type="text" id="groupNumber" name="groupNumber" required><br><br>
+                </div>
+                <div>
+                <label for="gender">Пол:</label>
+                <select id="gender" name="gender" required>
+                    <option value="мужской">Мужской</option>
+                    <option value="женский">Женский</option>
+                </select><br><br>
+            
+                <label for="age">Возраст:</label>
+                <input type="number" id="age" name="age" required><br><br>
+            
+                <label for="admissionForm">Форма поступления:</label>
+                <select id="admissionForm" name="admissionForm" required>
+                    <option value="бюджет">Бюджет</option>
+                    <option value="платный">Платный</option>
+                    <option value="бюджет">Целевое</option>
+                    <option value="платный">Особое право</option>
+                    <option value="платный">Отдельная квота</option>
+                </select><br><br>
+            
+                <label for="direction">Название направления:</label>
+                <input type="text" id="direction" name="direction" required><br><br>
+                </div>
+            </div>
+                <button type="submit">Добавить</button>
+        </form>
+        
+        <table id="studentsTable">
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Имя пользователя</th>
+                    <th>ID</th>
+                    <th>ФИО студента</th>
+                    <th>Номер зачетной книжки</th>
+                    <th>Номер группы</th>
+                    <th>Пол</th>
+                    <th>Возраст</th>
+                    <th>Форма поступления</th>
+                    <th>Название направления</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Jake</td>
-                    <td>Propper</td>
-                    <td>@vso</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Jake</td>
-                    <td>Propper</td>
-                    <td>@vso</td>
-                </tr>
             </tbody>
         </table>
-</body>
+        
+        <script>
+            document.getElementById('studentForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                const id = document.getElementById('id').value;
+                const name = document.getElementById('name').value;
+                const recordBook = document.getElementById('recordBook').value;
+                const groupNumber = document.getElementById('groupNumber').value;
+                const gender = document.getElementById('gender').value;
+                const age = document.getElementById('age').value;
+                const admissionForm = document.getElementById('admissionForm').value;
+                const direction = document.getElementById('direction').value;
+        
+                const table = document.getElementById('studentsTable').getElementsByTagName('tbody')[0];
+                const newRow = table.insertRow();
+        
+                newRow.insertCell(0).textContent = id;
+                newRow.insertCell(1).textContent = name;
+                newRow.insertCell(2).textContent = recordBook;
+                newRow.insertCell(3).textContent = groupNumber;
+                newRow.insertCell(4).textContent = gender;
+                newRow.insertCell(5).textContent = age;
+                newRow.insertCell(6).textContent = admissionForm;
+                newRow.insertCell(7).textContent = direction;
+        
+               document.getElementById('studentForm').reset();
+            });
+        </script>
+        
+        </body>
 
 </html>
