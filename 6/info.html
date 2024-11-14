@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+
+    <div id="navbar" class="sticky-nav">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#actorCarousel">Карусель</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#filmsCarousel">Карочки с<br> фильмами</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#infoButton">Об актёре</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-spy">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="info.html">Favorite Actor</a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="info.html">Info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="films.html">Films</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="actorCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#actorCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#actorCarousel" data-slide-to="1"></li>
+                <li data-target="#actorCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="actor1.jpg" class="d-block w-100" alt="Фото актёра 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="actor2.jpg" class="d-block w-100" alt="Фото актёра 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="actor3.jpg" class="d-block w-100" alt="Фото актёра 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#actorCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Назад</span>
+            </a>
+            <a class="carousel-control-next" href="#actorCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Вперёд</span>
+            </a>
+        </div>
+        <div id="filmsCarousel" class="container mt-5">
+            <div class="row card-deck">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="movie1.jpg" class="card-img-top" alt="Постер фильма 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Гараж</h5>
+                            <p class="card-text">Пайщики гаражного кооператива должны решить, кто лишний. Портрет целой
+                                страны в трагикомедии Эльдара Рязанова</p>
+                            <a href="https://www.kinopoisk.ru/film/44467/" target="_blank"
+                                class="btn btn-primary">Смотреть
+                                на Кинопоиск</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="movie2.jpg" class="card-img-top" alt="Постер фильма 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Чародеи</h5>
+                            <p class="card-text">Новогодняя сказка о том, что настоящая любовь может творить чудеса. В
+                                институте «НУИНУ» ...</p>
+                            <a href="https://www.kinopoisk.ru/film/79450/" target="_blank"
+                                class="btn btn-primary">Смотреть
+                                на Кинопоиск</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="movie3.jpg" class="card-img-top" alt="Постер фильма 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Жизнь и приключения Мишки Япончика</h5>
+                            <p class="card-text">История легендарного вора, которому удалось стать народным героем.
+                                Криминальная драма с Евгением Ткачуком</p>
+                            <a href="https://www.kinopoisk.ru/series/603888/" target="_blank"
+                                class="btn btn-primary">Смотреть на Кинопоиск</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="infoButton" class="btn btn-primary mb-3 infobtn" type="button" data-toggle="collapse"
+            data-target="#actorInfo" aria-expanded="false" aria-controls="actorInfo">
+            Биография
+        </button>
+        <div class="collapse" id="actorInfo">
+            <div class="card card-body">
+                <h3>Краткая информация об актёре</h3>
+                <p><strong>Место рождения:</strong> Москва, Россия</p>
+                <p><strong>Образование:</strong> Школу-студию МХАТ (окончил в 1957 году), актёр</p>
+                <p><strong>Личная жизнь:</strong> Был женат трижды. Его последней женой стала актриса Ольга Остроумова,
+                    с которой они оставались вместе до конца его жизни.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
